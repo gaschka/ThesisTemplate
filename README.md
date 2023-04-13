@@ -35,3 +35,7 @@ Export your bibliography from Zotero using the Better Bibtex format and replace 
 https://github.com/retorquere/zotero-better-bibtex
 
 Now you can drag and drop your cite keys from Zotero right into you latex doc.
+
+# Words with Hyphen (Trennstrich) and line breaks
+
+If your text contains words composed of two words with a hyphen inbetween (like DJ-Setup), in rare cases the used hyphenation can cause doubled hyphen at the end of a line. Write `DJ\-/Setup` instead, to force a single hyphen before the line wrap.
