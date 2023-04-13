@@ -9,7 +9,7 @@ This template is orginally designed for students and academics of the Games Mast
 * Use your favorite Tex editor to write, preview and render your document (I recommend Texpad for Mac).
 * Edit `ThesisTemplate.tex`
 
-# Get the font
+## Get the font
 
 https://fonts.google.com/specimen/Lato
 
