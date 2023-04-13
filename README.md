@@ -1,5 +1,6 @@
 # ThesisTemplate
-A Latex template for academic papers, designed by graphic Designers for readability and style
+A Latex template for academic papers, designed by graphic Designers for readability and style.
+This template is orginally designed for students and academics of the Games Master program at the University of applied Science Hamburg (HAW Hamburg). The graphic design is by Prof. Ralf Hebecker and adapted to Latex by Andreas Gaschka.
 
 ## How to use this template
 
