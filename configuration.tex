@@ -1,0 +1,171 @@
+% LATEX configuration
+\usepackage{etoolbox}
+\usepackage{geometry}
+\newtoggle{twopage}
+\input{layout-options.tex}
+
+%% Satzspiegel
+%% https://en.wikibooks.org/wiki/LaTeX/Page_Layout
+\geometry{left=6cm,right=2.5cm,top=2.4cm,bottom=3cm, a4paper,includefoot,}
+\iftoggle{twopage}{\geometry{twoside}} 
+\geometry{}
+
+
+%% Lokalisierung
+\usepackage[ngerman]{babel}
+\RequirePackage[ngerman=ngerman-x-latest]{hyphsubst}
+
+%% Additional Font Sizes 
+%% https://ftp.rrze.uni-erlangen.de/ctan/macros/latex/contrib/extsizes/extsizes.pdf
+\usepackage[utf8]{inputenc}
+
+%% Control Font Size:
+\usepackage{anyfontsize}
+
+%% Schöner Font
+\usepackage{fontspec}
+\setmainfont{Lato}[
+	Extension 	= , %Keine Extention on macOS
+	UprightFont = *-Regular ,
+	BoldFont 	= *-Bold, 
+	ItalicFont 	= *-Italic,
+]	
+\setmonofont{SpaceMono-Regular}[]
+
+%%% HYPERREF
+\usepackage[colorlinks=false, breaklinks=true]{hyperref}
+
+%% Apa styles Citation (load after Hyperref)
+\usepackage{apacite}
+	
+%% URL Font Styling
+\makeatletter
+	\def\url@urlstyle{
+	\@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\smal\ttfamily}}}
+	\makeatother
+\urlstyle{url}
+
+%% Zeilenabstand
+\usepackage[doublespacing]{setspace}
+
+%% Bibliographie in TOC
+%% https://ctan.joethei.xyz/macros/latex/contrib/tocbibind/tocbibind.pdf
+\usepackage[nottoc,]{tocbibind}
+
+%% Grafikpackages
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{caption}
+
+%https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_Silbentrennung#Globale_Silbentrennungsanweisung
+
+%% Schönere Fußnote
+\usepackage[footnote,printonlyused]{acronym}
+\usepackage{scrextend}
+\setlength{\skip\footins}{24pt} % Marging Top
+\deffootnote[1.6em]{1.6em}{1em}{{\thefootnotemark}\quad}
+
+%%\textsuperscript Nummer hochstellen (Do not)
+
+%% Satz Parameter
+\tolerance=1000
+
+%\sloppy < Use with caution
+
+%% Schönerer Flattersatz
+\usepackage{ragged2e}
+\RaggedRight
+\setlength{\RaggedRightRightskip}{16pt plus 2em}
+
+% Schönere Typographie
+\hyphenpenalty=1
+\doublehyphendemerits=10000     % No consecutive line hyphens.
+\brokenpenalty=1000              % No broken words across columns/pages.
+\widowpenalty=1000                % Almost no widows at bottom of page.
+\clubpenalty=1000                % Almost no orphans at top of page.
+\interfootnotelinepenalty=1000    % Almost never break footnotes.
+
+% TOC Layout
+%% Keine Punkte im Inhaltsverzeichnis
+\usepackage[titles]{tocloft}
+\renewcommand{\cftdot}{}
+
+% Bessere Einrückung im Inhaltsverzeichnis
+\renewcommand*{\cftsecindent}{2em}
+\renewcommand*{\cftsubsecindent}{3.5em}
+\renewcommand*{\cftsubsubsecindent}{6em}
+
+% BILDERPFAD global
+\graphicspath{ {./Bilder/} }
+
+% \hfil \break < Absatzabstand
+
+%% Keine Einrückung und Absatz Abstand
+%% http://ctan.org/pkg/parskip	
+\usepackage{parskip}
+\setlength{\parindent}{0pt} % VJ-originally 0pt
+\setlength{\parskip}{.8ex plus0.5ex minus0.2ex}
+
+
+
+%% Seitenzahl
+
+%% Seitenzahl Rechtsbündig, for single page layout
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear header and footer
+\rfoot{\thepage} % set page number on the right side of footer
+\renewcommand{\headrulewidth}{0pt} % remove header rule
+
+\iftoggle{twopage}{%% Seitenzahl Unten, links und recht, for double page layout
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear header and footer
+\fancyfoot[LE,RO]{\thepage} % page number on left for even pages, right for odd pages
+}
+
+
+
+
+
+%% Caption Linksbündig
+
+\usepackage{caption}
+\captionsetup{justification   = raggedright,
+              singlelinecheck = false}
+              
+
+%% Beautiful Part Titel
+%% https://tex.stackexchange.com/questions/522359/indent-for-second-line-in-long-chapter-title
+%% https://tex.stackexchange.com/questions/635254/how-to-align-minipages-on-the-top
+
+\usepackage[toctitles]{titlesec}
+
+\titleformat{\part}[block]{\fontsize{24}{20}\bfseries}{\thepart}{22pt}{\begin{minipage}[t]{\textwidth-68pt}}[\end{minipage}]
+\titlespacing{\part}{0pt}{-24pt}{12pt}[0pt]
+
+\titleformat{\section}[block]{\fontsize{16}{12}\bfseries}{\thesection}{16pt}{\begin{minipage}[t]{\textwidth-68pt}}[\end{minipage}]
+
+% Use \MakeUppercase
+
+
+%Make Part Numerals arabic
+\renewcommand{\thepart}{\arabic{part}}
+
+
+%% Fix Hyphens
+%% https://www.ctan.org/pkg/extdash
+
+\usepackage[shortcuts]{extdash}
+
+
+\usepackage{afterpage}
+
+
+%%% GLOSSAR 
+
+\usepackage[toc]{glossaries}
+\makeglossaries
+
+\loadglsentries{./Glossar.tex} 
+

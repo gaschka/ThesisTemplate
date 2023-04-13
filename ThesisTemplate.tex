@@ -1,0 +1,243 @@
+%% Thesistemplate
+
+\documentclass[9pt,a4paper,ngerman]{extarticle} 
+
+\input{configuration.tex}
+
+%% ======================================
+
+%% Begin Document
+
+\begin{document}
+
+
+%%% DECKBLATT
+
+\title{Dies ist ein Titel einer Thesis, der kann auch etwas länger sein.}
+
+\date{\today}
+\author{Vorname Nachname}
+
+
+\makeatletter
+\begin{titlepage}
+	\raggedright
+	\hspace{-47.5pt}
+	\includegraphics[width=0.46\textwidth,  ]{HAW_Marke_RGB.pdf}\par
+	\vspace{48pt}
+
+	\begin{spacing}{1}
+	\parbox{.98\textwidth}	
+	%%% adjust Value for Quality line break
+	{\bfseries\fontsize{22pt}{28pt}\selectfont \@title \par} %\MakeUppercase
+	\end{spacing}
+	\vfill
+	
+	{\bfseries Master-Thesis\par}
+	zur Erlangung des akademischen Grades Master of Arts\par
+	im Studiengang Zeitabhängige Medien/Games\par
+	\vfill
+	{\bfseries \@author \quad 123456\par}
+	Erstprüfer: tba.\par
+	Zweitprüfer: tba.\par
+	\vfill
+	{\@date\par}
+	\vfill
+	{\bfseries Hochschule für Angewandte Wissenschaften Hamburg\par}
+	Fakultät Design, Medien und Information Department Medientechnik
+	\vfill
+\end{titlepage}
+\makeatother
+
+%% add blank page in two page layout
+\iftoggle{twopage}{\newpage\null\pagenumbering{gobble}\newpage\pagenumbering{arabic}}
+	
+\clearpage
+
+%%%% ABSTRACT
+{\large\bfseries Abstract}\\
+Design is a fundamental component of many modern products and services, and is essential for creating experiences that are engaging and effective for users. This paper provides an overview of key principles and practices for designing user-centered experiences. We begin by discussing the importance of empathy and understanding users' needs and behaviors, and provide guidance on how to conduct user research and develop user personas. \vfill
+
+{\large\bfseries Zusammenfassung}\\
+Design ist ein grundlegender Bestandteil vieler moderner Produkte und Dienstleistungen und ist unerlässlich für die Schaffung von Erlebnissen, die für Benutzer ansprechend und effektiv sind. Dieses Papier gibt einen Überblick über wichtige Prinzipien und Praktiken für die Gestaltung benutzerzentrierter Erlebnisse. Wir beginnen damit, die Bedeutung von Empathie und dem Verständnis der Bedürfnisse und Verhaltensweisen von Benutzern zu diskutieren und geben Anleitung zur Durchführung von Benutzerforschung und zur Entwicklung von Benutzer-Personas. \vfill
+
+
+\#userexperience\break 
+\#usabilitytesting\break
+\#userresearch\break
+\#prototyping\break
+\#designpatterns\break
+
+\clearpage
+
+%%% INHALTSVERZEICHNIS
+\tableofcontents
+
+%%% Genderhinweis
+\vfill
+\paragraph{Hinweis}
+Die in dieser Thesis verwendeten Personenbezeichnungen beziehen sich immer gleichermaßen auf Personen aller Geschlechter. Auf Doppelnennungen oder gegenderte Bezeichnungen wird zugunsten der Lesbarkeit verzichtet.
+
+\clearpage
+
+%%%  Part 1:EINLEITUNG
+\part{Einleitung}\label{sec:einleitung}
+In diesem Paper wird das Thema \gls{ai} behandelt. Insbesondere geht es um die Anwendung von \gls{ml} auf ein bestimmtes \gls{dataset}. Die Motivation für diese Arbeit ist. 
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+\clearpage
+
+%% Part 2: Stand der Forschung und oder Technik
+\part{Stand der Forschung / Stand der Technik}\label{sec:stand}
+In der Forschung zu \gls{ai} und \gls{ml} gibt es bereits viele Ansätze zur Anwendung auf verschiedene Problemstellungen. So haben z.B. Smith et al. in \cite{smith2018} gezeigt, dass:
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+\begin{figure}
+	\includegraphics[width=1\columnwidth]{Group01}
+	\caption{Manuela Mustermann (2023): This is the caption of a large image.}
+	\label{fig:image-a}
+\end{figure}
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam (Abbildung \ref{fig:image-a}), quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.\cite{jones2025}
+
+\clearpage
+
+
+%% Part 3: Methodik
+\part{Methodik / Konzeption}\label{sec:methodik}
+Um die Anwendung von \gls{ml} auf das \gls{dataset} durchzuführen, wurde eine bestimmte Methodik entwickelt. Zunächst wurde das \gls{dataset}...
+
+\section{Datenaufbereitung}\label{subsec:datenaufbereitung}
+
+\subsection{Planung}
+Um das \gls{dataset} für das \gls{ml}-Verfahren vorzubereiten, wurden folgende Schritte durchgeführt:
+
+\begin{enumerate}
+    \item Bereinigung der Daten
+    \item Entfernung von Ausreißern
+    \item Feature-Extraktion
+\end{enumerate}
+
+\section{Modellarchitektur}\label{subsec:modellarchitektur}
+Für das \gls{ml}-Verfahren wurde eine bestimmte Modellarchitektur gewählt, die aus folgenden Schichten besteht\cite{wilson2021}:
+
+\begin{enumerate}
+    \item Eingabeschicht
+    \item Versteckte Schichten
+    \item Ausgabeschicht
+\end{enumerate}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+\subsection{Doloris Amenton}
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iustxo odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+\begin{figure}
+	\includegraphics[width=1\columnwidth]{Group2}
+	\caption{Jon Doe: This is the caption of a wide image.}
+	\label{fig:image-b}
+\end{figure}
+
+Ut wisi enim ad minim veniam (Abbildung \ref{fig:image-b}), quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+
+\clearpage
+
+%%%  Part 4: Implemeniertung
+\part{Implementierung}\label{sec:implementierung}
+
+\section{Entwicklung}
+Die Implementierung des \gls{ml}-Verfahrens wurde mit der Programmiersprache Python und der \textit{TensorFlow}-Bibliothek durchgeführt. Der Code für das Verfahren ist auf GitHub unter dem Link.
+
+\section{Lorem}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+\section{Ipsum}
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+
+\clearpage
+
+%%%  Part 5: Evaluation
+\part{Evaluation}\label{sec:evaluation}
+Um die Leistung des \gls{ml}-Verfahrens zu evaluieren, wurden folgende Metriken verwendet:
+
+\begin{itemize}
+    \item Genauigkeit
+    \item Recall
+    \item Precision
+\end{itemize}
+
+Die Ergebnisse der Evaluation zeigen, dass das Verfahren eine Genauigkeit von 90\% erreicht hat.\cite{smith2023}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\cite{wilson2026}
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+
+\clearpage
+
+%%%  Part 6: Zusammenfassung und/oder Ausblick
+\part{Ausblick}\label{sec:zusammenfassung}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+
+%\glsaddall
+\clearpage
+
+%%% ANGANG
+\appendix{}
+\clearpage
+
+%% GLOSSAR
+\printglossary[title=Glossar,toctitle=Glossar]
+
+\clearpage
+
+%% ABBILDUNGSVERZEICHNIS
+% \addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+\clearpage
+
+%% BIBLIOTHEK
+% Correct order of cites
+% https://stackoverflow.com/questions/43836656/set-correct-order-of-bibliography-using-latexbibtex
+\sloppy
+\bibliographystyle{apacitex}
+\bibliography{Bibliothek}
+\fussy
+
+\iftoggle{twopage}\clearpage\null\
+\clearpage
+
+%%% SELBSTSTÄNDIGKEITSERKLÄRUNG
+\addcontentsline{toc}{section}{Erklärung zur selbstständigen Bearbeitung}
+\section*{Erklärung zur selbstständigen\\ Bearbeitung}
+
+Hiermit versichere ich, dass ich die vorliegende Arbeit ohne fremde Hilfe selbständig verfasst und nur die angegebenen Hilfsmittel benutzt habe. Wörtlich oder dem Sinn nach aus anderen Werken entnommene Stellen sind unter Angabe der Quellen kenntlich gemacht.
+
+\vspace{64pt}
+\noindent\makebox[82pt]{\hrulefill} \hspace{4pt}
+    \makebox[82pt]{\hrulefill} \hspace{4pt}
+    \makebox[172pt]{\hrulefill} \\
+\noindent\makebox[82pt][l]{\footnotesize Ort} \hspace{4pt}
+    \makebox[82pt][l]{\footnotesize Datum} \hspace{4pt}
+    \makebox[172pt][l]{\footnotesize Unterschrift im Original}
+
+%% add blank page in two page layout
+\iftoggle{twopage}\clearpage\null\
+
+% Broschürenumschlag Innen- und Außenseite	
+
+\clearpage\null\pagestyle{empty}
+\iftoggle{twopage}\clearpage\null
+
+\end{document}
