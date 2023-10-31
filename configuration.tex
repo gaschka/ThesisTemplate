@@ -2,6 +2,7 @@
 \usepackage{etoolbox}
 \usepackage{geometry}
 \newtoggle{twopage}
+\newcommand{\cropmargin}{}
 \input{layout-options.tex}
 
 %% Satzspiegel
@@ -9,6 +10,23 @@
 \geometry{left=6cm,right=2.5cm,top=2.4cm,bottom=3cm, a4paper,includefoot,}
 \iftoggle{twopage}{\geometry{twoside}} 
 \geometry{}
+
+
+%% Anschnitt
+
+\usepackage{calc} % Load the calc package for mathematical operations
+
+% Define a crop margin variable
+
+% Calculate the new variable and assign it to \totalwidth
+\newlength{\totalwidth}
+\setlength{\totalwidth}{\paperwidth+\cropmargin}
+
+\newlength{\totalheigth}
+\setlength{\totalheigth}{\paperheight+\cropmargin}
+
+% Include the crop package to add trim marks
+\usepackage[frame,width=\the\totalwidth,height=\the\totalheigth,center,cam]{crop}
 
 
 %% Lokalisierung
