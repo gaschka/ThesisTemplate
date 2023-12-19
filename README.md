@@ -18,8 +18,7 @@ https://fonts.adobe.com/fonts/lato
 ## Options
 
 ### layout-options.tex 
-This file contains the option to toggle the page layout to be either a single page or a two page layout. Comment out the according line.
-Further you can toggle the visibily of layout guide.
+This file contains the option to toggle the page layout to be either a single page or a two page layout. Comment out the according line. You configure and toggle the crop margin in here as well, please consult the docs of your printing house to set the correct values. Further you can toggle the visibily of layout guide.
 
 ### configuration.tex
 This file includes all the packages to style the document and contains a lot of options to be touched by advanced graphic designers only.
@@ -36,6 +35,6 @@ https://github.com/retorquere/zotero-better-bibtex
 
 Now you can drag and drop your cite keys from Zotero right into you latex doc.
 
-# Words with Hyphen (Trennstrich) and line breaks
+## Words with Hyphen (Trennstrich) and line breaks
 
 If your text contains words composed of two words with a hyphen inbetween (like DJ-Setup), in rare cases the used hyphenation can cause doubled hyphen at the end of a line. Write `DJ\-/Setup` instead, to force a single hyphen before the line wrap.
